@@ -322,7 +322,42 @@ you should place your code here."
         '(("t" "Todo" entry (file+headline "~/Nextcloud/Documents/org/refile.org" "Tasks")
            "* TODO %?  :refile: \n  %i\n  %a")
           ("j" "Journal" entry (file+olp+datetree "~/Nextcloud/Documents/org/journal.org")
-           "* %?\nEntered on %U\n  %i\n  %a")))
+           "* %?\nEntered on %U\n  %i\n  %a")
+          ("s" "Movie with Sis" entry (file+headline "~/Nextcloud/Documents/org/mylife.org" "Family")
+            "* TODO Lunch/Movie with sister [0/10]
+** TODO pick movie
+*** possible movies
+** TODO call sister to tell her new plan [0/4]
+**** talk
+** TODO figure out some surprise or something unique/fun. [0/3]
+    Maybe just even mini-golf or something.
+**** TODO ask Amia for ideas
+**** TODO think of more
+**** TODO pick one
+** TODO registration/inspection good?
+** TODO tires good?
+** TODO [#B] plan for common parent scenarios [0/5]
+*** TODO Parents want to join me and sister [0/3]
+**** TODO is that acceptable? Why or why not?
+**** TODO plan responses
+**** TODO practice responses in microphone and listen to them paying attention to tone
+*** TODO Ask Amia for more parent scenarios I should account for [0/2]
+**** TODO ask
+**** TODO write them
+*** TODO Parents try to get me to come in [0/3]
+**** TODO Are you going to? Decide before-hand.
+**** TODO Plan response. Why or why aren't you coming in?
+**** TODO Plan responses to emotional manipulation or just plain emotions.
+*** TODO Parents try to say "We need to talk" [0/3]
+**** TODO willing to talk?
+***** TODO if so, write out common responses/questions of theirs and your answer
+***** TODO review said answers
+** TODO lunch [0/1]
+*** TODO leave for lunch & pick up sister
+** TODO watch movie
+** TODO talk
+** TODO leave
+" )))
   (setq org-refile-targets '((nil :maxlevel . 9)
                              (org-agenda-files :maxlevel . 9)))
   (setq org-outline-path-complete-in-steps nil)         ; Refile in a single go
