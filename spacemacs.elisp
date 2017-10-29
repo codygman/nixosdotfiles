@@ -317,6 +317,31 @@ you should place your code here."
      (emacs-lisp . t)
      (haskell . t))
   )
+  (setq org-tags-column -50)
+  (setq org-capture-templates
+        '(("t" "Todo" entry (file+headline "~/Nextcloud/Documents/org/refile.org" "Tasks")
+           "* TODO %?  :refile: \n  %i\n  %a")
+          ("j" "Journal" entry (file+olp+datetree "~/Nextcloud/Documents/org/journal.org")
+           "* %?\nEntered on %U\n  %i\n  %a")))
+  (setq org-refile-targets '((nil :maxlevel . 9)
+                             (org-agenda-files :maxlevel . 9)))
+  (setq org-outline-path-complete-in-steps nil)         ; Refile in a single go
+  (setq org-refile-use-outline-path t)                  ; Show full paths for refiling
+  (setq org-agenda-files (list "/home/cody/Nextcloud/Documents/org/"))
+  (setq org-log-into-drawer t)
+  (setq org-log-reschedule 'time)
+  (setq org-log-done 'time)
+  (setq org-archive-location "~/Nextcloud/Documents/org/archive.org::* From %s")
+  (setq visible-bell 1)
+
+  ;; START set agenda mode view font faces to look same as everything else
+  ;; See https://github.com/nashamri/spacemacs-theme/issues/62
+  (custom-set-faces
+   '(org-agenda-done ((t (:foreground "#86dc2f" :height 0.85)))))
+  (custom-set-faces
+   '(org-scheduled-today ((t (:foreground "#bc6ec5" :height 0.85)))))
+  ;; END set agenda mode view font faces to look same as everything else
+
   (setq org-confirm-babel-evaluate nil)
 )
 
