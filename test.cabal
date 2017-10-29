@@ -26,6 +26,7 @@ executable test-exe
                      , http-client
                      , http-client-tls
                      , http-conduit
+                     , wreq
                      -- ===========================================
 
                      -- logging ===================================
@@ -116,6 +117,7 @@ executable test-exe
                      -- Api's to services =======================
                      , github
                      , amazonka
+                     , gogol-gmail
                      -- =========================================
 
                      --| Image manipulation =====================
